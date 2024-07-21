@@ -3,34 +3,37 @@ import {Component} from 'react'
 import './index.css'
 
 class FruitsCounter extends Component {
-  state = {count: 0}
+  state = {
+    bananas: 0,
+    mango: 0,
+  }
 
   eatMango = () => {
     this.setState(prevState => {
-      console.log(`Previous State Count = ${prevState.count}`)
+      console.log(`Previous State Count = ${prevState.mango}`)
       return {
-        count: prevState.count + 1,
+        mango: prevState.mango + 1,
       }
     })
   }
 
   eatBanana = () => {
     this.setState(prevState => {
-      console.log(`Previous State Count = ${prevState.count}`)
+      console.log(`Previous State Count = ${prevState.bananas}`)
       return {
-        count: prevState.count + 1,
+        bananas: prevState.bananas + 1,
       }
     })
   }
 
   render() {
-    const {count} = this.state
+    const {bananas, mango} = this.state
     return (
       <div className="bg-container">
         <div className="content-container">
           <h1 className="heading">
-            Bob ate <span className="span">{count}</span> mangoes{' '}
-            <span className="span">{count}</span> bananas
+            Bob ate <span className="span">{mango}</span> mangoes{' '}
+            <span className="span">{bananas}</span> bananas
           </h1>
           <div className="images-container">
             <div className="inner-image-container">
