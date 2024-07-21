@@ -1,1 +1,84 @@
 /* Write your CSS here */
+.bg-container {
+    background-color: #ffd569;
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+}
+.content-container {
+    background-color: #ffffff;
+    max-width:1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+}
+.heading {
+    font-family:'Roboto';
+    font-size:40px;
+    color: #000000;
+    font-weight: bold;
+    padding:80px 0;
+}
+.span{
+    color: #ffd569;
+}
+.images-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:50px;
+}
+.inner-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    width:300px;
+    margin: 0 0 50px 0;
+}
+.button {
+    padding: 8px 25px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: 0;
+    border-radius: 8px;
+}
+@media screen and (max-width : 576px) {
+    .heading {
+        width:200px;
+        font-size:20px;
+        padding:40px 0;
+    }
+    .images-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .image {
+        width:300px;
+        margin: 50px 0;
+    }
+}
+
+@media screen and (max-width : 375px){
+    .bg-container{
+        padding: 20px;
+    }
+    .content-container{
+        max-width: 325px;
+    }
+    .image {
+        width:200px;
+        margin: 50px 0;
+    }
+}
